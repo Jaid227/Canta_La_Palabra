@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Canta la palabra · Ruleta musical</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <!-- Fondo animado de notas musicales -->
+    <div id="notas-fondo" aria-hidden="true"></div>
+
+    <!-- Contenedor principal -->
+    <main id="app">
+
+        <!-- Título animado -->
+        <h1 id="titulo-principal">
+            <span>C</span><span>a</span><span>n</span><span>t</span><span>a</span>
+            <span class="espacio"> </span>
+            <span>l</span><span>a</span>
+            <span class="espacio"> </span>
+            <span>p</span><span>a</span><span>l</span><span>a</span><span>b</span><span>r</span><span>a</span>
+        </h1>
+
+        <!-- Zona de juego -->
+        <div id="zona-juego">
+            <!-- Botón circular INICIAR -->
+            <button id="btn-iniciar" class="btn-circular">INICIAR</button>
+
+            <!-- Contenedor de la palabra elegida -->
+            <div id="palabra-elegida" class="palabra-centro" style="display: none;"> </div>
+
+            <!-- Camino para el botón deslizable -->
+            <div id="camino-deslizamiento" style="display: none;">
+                <div id="carril"></div>
+                <div id="orificio-destino"></div>
+                <div id="contenedor-arrastre">
+                    <button id="btn-arrastrable" class="btn-cuadrado">⟳</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <a href="https://jaid227.github.io/EntropiaDigital/" target="_blank" rel="noopener noreferrer">
+                → © 2026 Mandrágora Entrópica | Desarrollo Web Estratégico ←
+            </a>
+        </footer>
+
+        <!-- Control de modo -->
+        <div id="modo-control">
+            <button id="btn-modo" class="modo-toggle" aria-label="Cambiar modo claro/oscuro">🌙</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
